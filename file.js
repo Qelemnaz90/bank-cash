@@ -19,8 +19,8 @@ let balance = 0;
 incrementBtn.addEventListener('click', function() {
     let value = parseFloat(moneyInput.value);
     balance += value;
+    moneyInput.value = '';
     balanceEl.textContent = balance;
-    moneyInput.innerHTML = ''
     listTable.innerHTML += `
     <tr>
             <th scope="row">${listTable.rows.length + 1}</th>
